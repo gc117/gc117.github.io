@@ -73,7 +73,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"always"},
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -196,7 +196,98 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/08/MySQL启动失败/" itemprop="url">
+                  MySQL启动失败
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-08T20:56:19+08:00" content="2016-03-08">
+              2016-03-08
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="MySQL启动失败"><a href="#MySQL启动失败" class="headerlink" title="MySQL启动失败"></a>MySQL启动失败</h2><p>启动显示报错:<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mysql.server start</span><br><span class="line">Starting MySQL</span><br><span class="line">. ERROR! The server quit without updating PID file (/usr/<span class="built_in">local</span>/var/mysql/MBP.lan.pid).</span><br></pre></td></tr></table></figure></p>
+<p>问题原因:权限问题</p>
+<p>解决办法:<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R mysql:mysql /usr/<span class="built_in">local</span>/var/mysql</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
 
     
       <header class="post-header">
@@ -251,104 +342,14 @@
       
         
           
-            <h2 id="PHP基础"><a href="#PHP基础" class="headerlink" title="PHP基础"></a>PHP基础</h2><h3 id="含有中英的字符串如何获取长度"><a href="#含有中英的字符串如何获取长度" class="headerlink" title="含有中英的字符串如何获取长度"></a>含有中英的字符串如何获取长度</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	<span class="variable">$str</span> = <span class="string">'中文English'</span>;</span><br><span class="line">	<span class="variable">$getLen</span> = mb_strlen(<span class="variable">$str</span>,<span class="string">'UTF8'</span>);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="遍历目录下所有文件夹"><a href="#遍历目录下所有文件夹" class="headerlink" title="遍历目录下所有文件夹"></a>遍历目录下所有文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="交换变量"><a href="#交换变量" class="headerlink" title="交换变量"></a>交换变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="Session与Cookie"><a href="#Session与Cookie" class="headerlink" title="Session与Cookie"></a>Session与Cookie</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="Http协议"><a href="#Http协议" class="headerlink" title="Http协议"></a>Http协议</h3><p>//<a href="http://www.jianshu.com/p/00631797a60d" target="_blank" rel="external">http://www.jianshu.com/p/00631797a60d</a></p>
+            <h2 id="PHP基础"><a href="#PHP基础" class="headerlink" title="PHP基础"></a>PHP基础</h2><h3 id="含有中英的字符串获取长度"><a href="#含有中英的字符串获取长度" class="headerlink" title="含有中英的字符串获取长度"></a>含有中英的字符串获取长度</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	<span class="variable">$str</span> = <span class="string">'中文English'</span>;</span><br><span class="line">	<span class="variable">$getLen</span> = mb_strlen(<span class="variable">$str</span>,<span class="string">'UTF8'</span>);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="遍历目录下所有文件"><a href="#遍历目录下所有文件" class="headerlink" title="遍历目录下所有文件"></a>遍历目录下所有文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	<span class="variable">$dir</span> = <span class="string">'/ABC/ABC'</span>;</span><br><span class="line">	<span class="keyword">function</span> getAllPath(<span class="variable">$dir</span>)</span><br><span class="line">	&#123;</span><br><span class="line">	    <span class="built_in">echo</span> <span class="variable">$dir</span>.<span class="string">"\r\n"</span>;</span><br><span class="line">	    <span class="built_in">echo</span> <span class="string">'&lt;br&gt;'</span>;</span><br><span class="line">	    <span class="keyword">if</span> (is_dir(<span class="variable">$dir</span>))</span><br><span class="line">	    &#123;</span><br><span class="line">	        <span class="variable">$arrDir</span> = scandir(<span class="variable">$dir</span>);</span><br><span class="line">	        foreach (<span class="variable">$arrDir</span> as <span class="variable">$value</span>)</span><br><span class="line">	        &#123;</span><br><span class="line">	            <span class="keyword">if</span> (<span class="variable">$value</span> !== <span class="string">'.'</span> &amp;&amp; <span class="variable">$value</span> !== <span class="string">'..'</span>)</span><br><span class="line">	            &#123;</span><br><span class="line">	                getAllPath(<span class="variable">$dir</span>.<span class="string">'/'</span>.<span class="variable">$value</span>);</span><br><span class="line">	            &#125;</span><br><span class="line">	        &#125;</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="不借助临时变量，交换变量"><a href="#不借助临时变量，交换变量" class="headerlink" title="不借助临时变量，交换变量"></a>不借助临时变量，交换变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	<span class="variable">$a</span> = <span class="string">'PHP'</span>;</span><br><span class="line">	<span class="variable">$b</span> = 123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">function</span> changeVal1(<span class="variable">$a</span>,<span class="variable">$b</span>)&#123;</span><br><span class="line">	    <span class="variable">$a</span> = [<span class="variable">$b</span>, <span class="variable">$b</span>=<span class="variable">$a</span>][0];</span><br><span class="line">	    <span class="built_in">echo</span> <span class="variable">$a</span>,<span class="variable">$b</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">function</span> changeVal2(<span class="variable">$a</span>,<span class="variable">$b</span>)&#123;</span><br><span class="line">	    list(<span class="variable">$a</span>, <span class="variable">$b</span>) = array(<span class="variable">$b</span>, <span class="variable">$a</span>);</span><br><span class="line">	    <span class="built_in">echo</span> <span class="variable">$a</span>,<span class="variable">$b</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">function</span> changeVal3(<span class="variable">$a</span>,<span class="variable">$b</span>)&#123;</span><br><span class="line">	    <span class="variable">$a</span> = explode(<span class="string">'-'</span>,<span class="variable">$a</span>.<span class="string">'-'</span>.<span class="variable">$b</span>);</span><br><span class="line">	    <span class="variable">$b</span> =<span class="variable">$a</span>[0];</span><br><span class="line">	    <span class="variable">$a</span> =<span class="variable">$a</span>[1];</span><br><span class="line">	    <span class="built_in">echo</span> <span class="variable">$a</span>,<span class="variable">$b</span>;</span><br><span class="line">	&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="求出相对路径"><a href="#求出相对路径" class="headerlink" title="求出相对路径"></a>求出相对路径</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"><span class="keyword">function</span> getRelativePath(<span class="variable">$aPath</span>, <span class="variable">$bPath</span>) &#123;</span><br><span class="line">    <span class="variable">$aArr</span> = explode(<span class="string">'/'</span>, <span class="variable">$aPath</span>);</span><br><span class="line"></span><br><span class="line">    <span class="variable">$bArr</span> = explode(<span class="string">'/'</span>, <span class="variable">$bPath</span>);</span><br><span class="line"></span><br><span class="line">    <span class="variable">$aDiffToB</span> = array_diff_assoc(<span class="variable">$aArr</span>, <span class="variable">$bArr</span>);</span><br><span class="line"></span><br><span class="line">    <span class="variable">$count</span> = count(<span class="variable">$aDiffToB</span>);</span><br><span class="line"></span><br><span class="line">    <span class="variable">$path</span> = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="variable">$i</span> = 1; <span class="variable">$i</span> &lt; <span class="variable">$count</span>; <span class="variable">$i</span>++)&#123;</span><br><span class="line">        <span class="variable">$path</span> .= <span class="string">'../'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable">$path</span> .= implode(<span class="string">'/'</span>, <span class="variable">$aDiffToB</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> <span class="variable">$path</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$a</span> = <span class="string">'/a/b/c/d/a.php'</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$b</span> = <span class="string">'/a/b/1/2/b.php'</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> getRelativePath(<span class="variable">$a</span>, <span class="variable">$b</span>);</span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="二维数组排序"><a href="#二维数组排序" class="headerlink" title="二维数组排序"></a>二维数组排序</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    <span class="keyword">function</span> my_sort(<span class="variable">$arrays</span>,<span class="variable">$sort_key</span>,<span class="variable">$sort_order</span>=SORT_ASC,<span class="variable">$sort_type</span>=SORT_NUMERIC )&#123;</span><br><span class="line">        <span class="keyword">if</span>(is_array(<span class="variable">$arrays</span>))&#123;</span><br><span class="line">            foreach (<span class="variable">$arrays</span> as <span class="variable">$array</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(is_array(<span class="variable">$array</span>))&#123;</span><br><span class="line">                    <span class="variable">$key_arrays</span>[] = <span class="variable">$array</span>[<span class="variable">$sort_key</span>];</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        array_multisort(<span class="variable">$key_arrays</span>,<span class="variable">$sort_order</span>,<span class="variable">$sort_type</span>,<span class="variable">$arrays</span>);</span><br><span class="line">        <span class="built_in">return</span> <span class="variable">$arrays</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable">$person</span> =  array(</span><br><span class="line">        array(<span class="string">'id'</span>=&gt;1,<span class="string">'name'</span>=&gt;<span class="string">'fj'</span>,<span class="string">'weight'</span>=&gt;100,<span class="string">'height'</span>=&gt;180),</span><br><span class="line">        array(<span class="string">'id'</span>=&gt;2,<span class="string">'name'</span>=&gt;<span class="string">'tom'</span>,<span class="string">'weight'</span>=&gt;53,<span class="string">'height'</span>=&gt;150),</span><br><span class="line">        array(<span class="string">'id'</span>=&gt;3,<span class="string">'name'</span>=&gt;<span class="string">'jerry'</span>,<span class="string">'weight'</span>=&gt;120,<span class="string">'height'</span>=&gt;156),</span><br><span class="line">        array(<span class="string">'id'</span>=&gt;4,<span class="string">'name'</span>=&gt;<span class="string">'bill'</span>,<span class="string">'weight'</span>=&gt;110,<span class="string">'height'</span>=&gt;190),</span><br><span class="line">        array(<span class="string">'id'</span>=&gt;5,<span class="string">'name'</span>=&gt;<span class="string">'linken'</span>,<span class="string">'weight'</span>=&gt;80,<span class="string">'height'</span>=&gt;200),</span><br><span class="line">        array(<span class="string">'id'</span>=&gt;6,<span class="string">'name'</span>=&gt;<span class="string">'madana'</span>,<span class="string">'weight'</span>=&gt;95,<span class="string">'height'</span>=&gt;110),</span><br><span class="line">        array(<span class="string">'id'</span>=&gt;7,<span class="string">'name'</span>=&gt;<span class="string">'jordan'</span>,<span class="string">'weight'</span>=&gt;70,<span class="string">'height'</span>=&gt;170)</span><br><span class="line">    );</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">'&lt;pre&gt;'</span>;</span><br><span class="line">    var_dump(<span class="variable">$person</span>);</span><br><span class="line"></span><br><span class="line">    <span class="variable">$person</span> = my_sort(<span class="variable">$person</span>,<span class="string">'name'</span>,SORT_ASC,SORT_STRING);</span><br><span class="line"></span><br><span class="line">    var_dump(<span class="variable">$person</span>);</span><br><span class="line"></span><br><span class="line">    <span class="variable">$person</span> = my_sort(<span class="variable">$person</span>,<span class="string">'weight'</span>);</span><br><span class="line"></span><br><span class="line">    var_dump(<span class="variable">$person</span>);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="获取时间"><a href="#获取时间" class="headerlink" title="获取时间"></a>获取时间</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    date_default_timezone_<span class="built_in">set</span>(<span class="string">'PRC'</span>); //默认时区</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"今天:"</span>,date(<span class="string">"Y-m-d"</span>,time()),<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"今天:"</span>,date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"18 june 2008"</span>)),<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"昨天:"</span>,date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"-1 day"</span>)), <span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"明天:"</span>,date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"+1 day"</span>)), <span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"一周后:"</span>,date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"+1 week"</span>)), <span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"一周零两天四小时两秒后:"</span>,date(<span class="string">"Y-m-d G:H:s"</span>,strtotime(<span class="string">"+1 week 2 days 4 hours 2 seconds"</span>)), <span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"下个星期四:"</span>,date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"next Thursday"</span>)), <span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"上个周一:"</span>.date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"last Monday"</span>)).<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"一个月前:"</span>.date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"last month"</span>)).<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"一个月后:"</span>.date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"+1 month"</span>)).<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"十年后:"</span>.date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"+10 year"</span>)).<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
 
           
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/05/第一篇博客/" itemprop="url">
-                  第一篇博客
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-05T22:22:22+08:00" content="2016-03-05">
-              2016-03-05
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>我的关于PHP第一篇博客<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/05/第一篇博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
         
       
     </div>
@@ -422,7 +423,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="PHP," />
+  <meta name="keywords" content="MySQL,Mac," />
 
 
 
@@ -57,16 +57,22 @@
 
 
 
-<meta name="description" content="我的关于PHP第一篇博客">
+<meta name="description" content="MySQL启动失败启动显示报错:    123$ mysql.server startStarting MySQL. ERROR! The server quit without updating PID file (/usr/local/var/mysql/MBP.lan.pid).
+问题原因:权限问题
+解决办法:    1sudo chown -R mysql:mysql /usr/local">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇博客">
-<meta property="og:url" content="http://gc117.github.io/2016/03/05/第一篇博客/index.html">
+<meta property="og:title" content="MySQL启动失败">
+<meta property="og:url" content="http://gc117.github.io/2016/03/08/MySQL启动失败/index.html">
 <meta property="og:site_name" content="GC117的Finder">
-<meta property="og:description" content="我的关于PHP第一篇博客">
-<meta property="og:updated_time" content="2016-03-06T03:36:03.000Z">
+<meta property="og:description" content="MySQL启动失败启动显示报错:    123$ mysql.server startStarting MySQL. ERROR! The server quit without updating PID file (/usr/local/var/mysql/MBP.lan.pid).
+问题原因:权限问题
+解决办法:    1sudo chown -R mysql:mysql /usr/local">
+<meta property="og:updated_time" content="2016-03-08T13:24:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一篇博客">
-<meta name="twitter:description" content="我的关于PHP第一篇博客">
+<meta name="twitter:title" content="MySQL启动失败">
+<meta name="twitter:description" content="MySQL启动失败启动显示报错:    123$ mysql.server startStarting MySQL. ERROR! The server quit without updating PID file (/usr/local/var/mysql/MBP.lan.pid).
+问题原因:权限问题
+解决办法:    1sudo chown -R mysql:mysql /usr/local">
 
 
 
@@ -74,7 +80,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"always"},
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -84,7 +90,7 @@
   };
 </script>
 
-  <title> 第一篇博客 | GC117的Finder </title>
+  <title> MySQL启动失败 | GC117的Finder </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -206,7 +212,7 @@
             
             
               
-                第一篇博客
+                MySQL启动失败
               
             
           </h1>
@@ -218,8 +224,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-05T22:22:22+08:00" content="2016-03-05">
-              2016-03-05
+            <time itemprop="dateCreated" datetime="2016-03-08T20:56:19+08:00" content="2016-03-08">
+              2016-03-08
             </time>
           </span>
 
@@ -245,7 +251,9 @@
       
 
       
-        <p>我的关于PHP第一篇博客<br><a id="more"></a><br>Hello PHP！<br>Hello PHp!</p>
+        <h2 id="MySQL启动失败"><a href="#MySQL启动失败" class="headerlink" title="MySQL启动失败"></a>MySQL启动失败</h2><p>启动显示报错:<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mysql.server start</span><br><span class="line">Starting MySQL</span><br><span class="line">. ERROR! The server quit without updating PID file (/usr/<span class="built_in">local</span>/var/mysql/MBP.lan.pid).</span><br></pre></td></tr></table></figure></p>
+<p>问题原因:权限问题</p>
+<p>解决办法:<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R mysql:mysql /usr/<span class="built_in">local</span>/var/mysql</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -260,7 +268,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/PHP/" rel="tag">#PHP</a>
+            <a href="/tags/MySQL/" rel="tag">#MySQL</a>
+          
+            <a href="/tags/Mac/" rel="tag">#Mac</a>
           
         </div>
       
@@ -269,13 +279,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/06/刷题PHP/" rel="next" title="PHP刷题">
+                <i class="fa fa-chevron-left"></i> PHP刷题
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/06/刷题PHP/" rel="prev" title="PHP刷题">
-                PHP刷题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -353,7 +363,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -386,7 +396,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL启动失败"><span class="nav-number">1.</span> <span class="nav-text">MySQL启动失败</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
