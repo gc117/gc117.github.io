@@ -32,7 +32,7 @@
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <!--<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">-->
 
 
 
@@ -186,6 +186,133 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/09/HTTP协议/" itemprop="url">
+                  HTTP协议
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-09T19:36:20+08:00" content="2016-03-09">
+              2016-03-09
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2><h3 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法:"></a>请求方法:</h3><pre><code>GET:请求获取Request-URI所标识的资源
+POST:在Request-URI所标识的资源后附加新的资源
+DELETE:请求服务器删除Request-URI所标识的资源
+PUT:请求服务器存储一个资源,并用Request-URI作为其标识
+HEAD:请求获取由Request-URI所标识的资源的响应消息报头
+TRACE:请求服务器回送收到的请求信息,主要用于测试或诊断
+CONNECT:保留以备将来使用
+OPTION:请求查询服务器的性能,或者查询与资源相关的选项和需求
+</code></pre><h3 id="RESTful举例"><a href="#RESTful举例" class="headerlink" title="RESTful举例:"></a>RESTful举例:</h3><pre><code>GET /users: 逐页列出所有用户(查)
+HEAD /users: 显示用户列表的概要信息
+POST /users: 创建一个新用户(增)
+GET /users/123: 返回用户 123 的详细信息(查)
+HEAD /users/123: 显示用户 123 的概述信息
+PATCH /users/123: 更新用户123(改)
+PUT /users/123: 更新用户123(改)
+DELETE /users/123: 删除用户123(删)
+OPTIONS /users: 显示关于末端 /users 支持的动词
+OPTIONS /users/123: 显示有关末端 /users/123 支持的动词
+</code></pre><h2 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h2><h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码:"></a>状态码:</h3><pre><code>1XX:指示信息        //请求已接收,继续处理
+2XX:成功           //请求已被成功接受
+3XX:重定向         //要完成请求必须进行更进一步的操作
+4XX:客户端错误     //请求有语法错误或者请求无法实现
+5XX:服务器端错误   //服务器端未能实现合法的请求
+</code></pre><h3 id="举例"><a href="#举例" class="headerlink" title="举例:"></a>举例:</h3><pre><code>200 OK:客户端请求成功.
+400 Bad Request:客户端请求有语法错误,不能被服务器所理解.
+401 Unauthorize:请求未经授权.
+403 Forbidden:服务器收到请求,但是拒绝服务.
+404 Not Found:请求资源不存在,例如输入了错误的URL.
+500 Interal Server Error: 服务器发生不可预期的错误.
+503 Server Unavailable: 服务器当前不能处理客户端的请求,一段时间后可能恢复.
+</code></pre><h2 id="报头"><a href="#报头" class="headerlink" title="报头"></a>报头</h2><pre><code>Host
+User-Agent
+Accept
+Cookie
+Cache-Control
+Referer
+Content-Length
+Content-Range
+Accept-Encoding
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -505,7 +632,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -515,7 +642,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

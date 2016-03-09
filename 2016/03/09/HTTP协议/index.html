@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="MySQL,Mac," />
+  <meta name="keywords" content="HTTP," />
 
 
 
@@ -57,22 +57,34 @@
 
 
 
-<meta name="description" content="MySQL启动失败启动显示报错:    123$ mysql.server startStarting MySQL. ERROR! The server quit without updating PID file (/usr/local/var/mysql/MBP.lan.pid).
-问题原因:权限问题
-解决办法:    1sudo chown -R mysql:mysql /usr/local">
+<meta name="description" content="请求请求方法:GET:请求获取Request-URI所标识的资源
+POST:在Request-URI所标识的资源后附加新的资源
+DELETE:请求服务器删除Request-URI所标识的资源
+PUT:请求服务器存储一个资源,并用Request-URI作为其标识
+HEAD:请求获取由Request-URI所标识的资源的响应消息报头
+TRACE:请求服务器回送收到的请求信息,主要用于测试或诊断
+CON">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL启动失败">
-<meta property="og:url" content="http://gc117.github.io/2016/03/08/MySQL启动失败/index.html">
+<meta property="og:title" content="HTTP协议">
+<meta property="og:url" content="http://gc117.github.io/2016/03/09/HTTP协议/index.html">
 <meta property="og:site_name" content="GC117的Finder">
-<meta property="og:description" content="MySQL启动失败启动显示报错:    123$ mysql.server startStarting MySQL. ERROR! The server quit without updating PID file (/usr/local/var/mysql/MBP.lan.pid).
-问题原因:权限问题
-解决办法:    1sudo chown -R mysql:mysql /usr/local">
-<meta property="og:updated_time" content="2016-03-08T13:24:50.000Z">
+<meta property="og:description" content="请求请求方法:GET:请求获取Request-URI所标识的资源
+POST:在Request-URI所标识的资源后附加新的资源
+DELETE:请求服务器删除Request-URI所标识的资源
+PUT:请求服务器存储一个资源,并用Request-URI作为其标识
+HEAD:请求获取由Request-URI所标识的资源的响应消息报头
+TRACE:请求服务器回送收到的请求信息,主要用于测试或诊断
+CON">
+<meta property="og:updated_time" content="2016-03-09T11:43:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL启动失败">
-<meta name="twitter:description" content="MySQL启动失败启动显示报错:    123$ mysql.server startStarting MySQL. ERROR! The server quit without updating PID file (/usr/local/var/mysql/MBP.lan.pid).
-问题原因:权限问题
-解决办法:    1sudo chown -R mysql:mysql /usr/local">
+<meta name="twitter:title" content="HTTP协议">
+<meta name="twitter:description" content="请求请求方法:GET:请求获取Request-URI所标识的资源
+POST:在Request-URI所标识的资源后附加新的资源
+DELETE:请求服务器删除Request-URI所标识的资源
+PUT:请求服务器存储一个资源,并用Request-URI作为其标识
+HEAD:请求获取由Request-URI所标识的资源的响应消息报头
+TRACE:请求服务器回送收到的请求信息,主要用于测试或诊断
+CON">
 
 
 
@@ -90,7 +102,7 @@
   };
 </script>
 
-  <title> MySQL启动失败 | GC117的Finder </title>
+  <title> HTTP协议 | GC117的Finder </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -212,7 +224,7 @@
             
             
               
-                MySQL启动失败
+                HTTP协议
               
             
           </h1>
@@ -224,8 +236,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-08T20:56:19+08:00" content="2016-03-08">
-              2016-03-08
+            <time itemprop="dateCreated" datetime="2016-03-09T19:36:20+08:00" content="2016-03-09">
+              2016-03-09
             </time>
           </span>
 
@@ -251,10 +263,46 @@
       
 
       
-        <h2 id="MySQL启动失败"><a href="#MySQL启动失败" class="headerlink" title="MySQL启动失败"></a>MySQL启动失败</h2><p>启动显示报错:<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mysql.server start</span><br><span class="line">Starting MySQL</span><br><span class="line">. ERROR! The server quit without updating PID file (/usr/<span class="built_in">local</span>/var/mysql/MBP.lan.pid).</span><br></pre></td></tr></table></figure></p>
-<p>问题原因:权限问题</p>
-<p>解决办法:<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R mysql:mysql /usr/<span class="built_in">local</span>/var/mysql</span><br></pre></td></tr></table></figure></p>
-
+        <h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2><h3 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法:"></a>请求方法:</h3><pre><code>GET:请求获取Request-URI所标识的资源
+POST:在Request-URI所标识的资源后附加新的资源
+DELETE:请求服务器删除Request-URI所标识的资源
+PUT:请求服务器存储一个资源,并用Request-URI作为其标识
+HEAD:请求获取由Request-URI所标识的资源的响应消息报头
+TRACE:请求服务器回送收到的请求信息,主要用于测试或诊断
+CONNECT:保留以备将来使用
+OPTION:请求查询服务器的性能,或者查询与资源相关的选项和需求
+</code></pre><h3 id="RESTful举例"><a href="#RESTful举例" class="headerlink" title="RESTful举例:"></a>RESTful举例:</h3><pre><code>GET /users: 逐页列出所有用户(查)
+HEAD /users: 显示用户列表的概要信息
+POST /users: 创建一个新用户(增)
+GET /users/123: 返回用户 123 的详细信息(查)
+HEAD /users/123: 显示用户 123 的概述信息
+PATCH /users/123: 更新用户123(改)
+PUT /users/123: 更新用户123(改)
+DELETE /users/123: 删除用户123(删)
+OPTIONS /users: 显示关于末端 /users 支持的动词
+OPTIONS /users/123: 显示有关末端 /users/123 支持的动词
+</code></pre><h2 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h2><h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码:"></a>状态码:</h3><pre><code>1XX:指示信息        //请求已接收,继续处理
+2XX:成功           //请求已被成功接受
+3XX:重定向         //要完成请求必须进行更进一步的操作
+4XX:客户端错误     //请求有语法错误或者请求无法实现
+5XX:服务器端错误   //服务器端未能实现合法的请求
+</code></pre><h3 id="举例"><a href="#举例" class="headerlink" title="举例:"></a>举例:</h3><pre><code>200 OK:客户端请求成功.
+400 Bad Request:客户端请求有语法错误,不能被服务器所理解.
+401 Unauthorize:请求未经授权.
+403 Forbidden:服务器收到请求,但是拒绝服务.
+404 Not Found:请求资源不存在,例如输入了错误的URL.
+500 Interal Server Error: 服务器发生不可预期的错误.
+503 Server Unavailable: 服务器当前不能处理客户端的请求,一段时间后可能恢复.
+</code></pre><h2 id="报头"><a href="#报头" class="headerlink" title="报头"></a>报头</h2><pre><code>Host
+User-Agent
+Accept
+Cookie
+Cache-Control
+Referer
+Content-Length
+Content-Range
+Accept-Encoding
+</code></pre>
       
     </div>
 
@@ -268,9 +316,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MySQL/" rel="tag">#MySQL</a>
-          
-            <a href="/tags/Mac/" rel="tag">#Mac</a>
+            <a href="/tags/HTTP/" rel="tag">#HTTP</a>
           
         </div>
       
@@ -279,17 +325,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/06/刷题PHP/" rel="next" title="PHP刷题">
-                <i class="fa fa-chevron-left"></i> PHP刷题
+              <a href="/2016/03/09/排序算法/" rel="next" title="PHP排序算法">
+                <i class="fa fa-chevron-left"></i> PHP排序算法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/09/排序算法/" rel="prev" title="PHP排序算法">
-                PHP排序算法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -400,7 +442,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL启动失败"><span class="nav-number">1.</span> <span class="nav-text">MySQL启动失败</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#请求"><span class="nav-number">1.</span> <span class="nav-text">请求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#请求方法"><span class="nav-number">1.1.</span> <span class="nav-text">请求方法:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESTful举例"><span class="nav-number">1.2.</span> <span class="nav-text">RESTful举例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应"><span class="nav-number">2.</span> <span class="nav-text">响应</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#状态码"><span class="nav-number">2.1.</span> <span class="nav-text">状态码:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#举例"><span class="nav-number">2.2.</span> <span class="nav-text">举例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报头"><span class="nav-number">3.</span> <span class="nav-text">报头</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
