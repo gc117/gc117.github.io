@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTTP," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -57,34 +57,16 @@
 
 
 
-<meta name="description" content="请求请求方法:GET:请求获取Request-URI所标识的资源
-POST:在Request-URI所标识的资源后附加新的资源
-DELETE:请求服务器删除Request-URI所标识的资源
-PUT:请求服务器存储一个资源,并用Request-URI作为其标识
-HEAD:请求获取由Request-URI所标识的资源的响应消息报头
-TRACE:请求服务器回送收到的请求信息,主要用于测试或诊断
-CON">
+<meta name="description" content="JavaScript的ajax实例js原生1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&amp;lt;script&amp;gt;        //兼容        function createXHR()&amp;#123;            if (typeof XMLHt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP协议">
-<meta property="og:url" content="http://gc117.github.io/2016/03/09/HTTP协议/index.html">
+<meta property="og:title" content="AJAX">
+<meta property="og:url" content="http://gc117.github.io/2016/03/11/AJAX/index.html">
 <meta property="og:site_name" content="GC117的Finder">
-<meta property="og:description" content="请求请求方法:GET:请求获取Request-URI所标识的资源
-POST:在Request-URI所标识的资源后附加新的资源
-DELETE:请求服务器删除Request-URI所标识的资源
-PUT:请求服务器存储一个资源,并用Request-URI作为其标识
-HEAD:请求获取由Request-URI所标识的资源的响应消息报头
-TRACE:请求服务器回送收到的请求信息,主要用于测试或诊断
-CON">
-<meta property="og:updated_time" content="2016-03-09T11:43:59.000Z">
+<meta property="og:description" content="JavaScript的ajax实例js原生1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&amp;lt;script&amp;gt;        //兼容        function createXHR()&amp;#123;            if (typeof XMLHt">
+<meta property="og:updated_time" content="2016-03-11T10:50:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTP协议">
-<meta name="twitter:description" content="请求请求方法:GET:请求获取Request-URI所标识的资源
-POST:在Request-URI所标识的资源后附加新的资源
-DELETE:请求服务器删除Request-URI所标识的资源
-PUT:请求服务器存储一个资源,并用Request-URI作为其标识
-HEAD:请求获取由Request-URI所标识的资源的响应消息报头
-TRACE:请求服务器回送收到的请求信息,主要用于测试或诊断
-CON">
+<meta name="twitter:title" content="AJAX">
+<meta name="twitter:description" content="JavaScript的ajax实例js原生1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&amp;lt;script&amp;gt;        //兼容        function createXHR()&amp;#123;            if (typeof XMLHt">
 
 
 
@@ -102,7 +84,7 @@ CON">
   };
 </script>
 
-  <title> HTTP协议 | GC117的Finder </title>
+  <title> AJAX | GC117的Finder </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -224,7 +206,7 @@ CON">
             
             
               
-                HTTP协议
+                AJAX
               
             
           </h1>
@@ -236,8 +218,8 @@ CON">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-09T19:36:20+08:00" content="2016-03-09">
-              2016-03-09
+            <time itemprop="dateCreated" datetime="2016-03-11T18:45:11+08:00" content="2016-03-11">
+              2016-03-11
             </time>
           </span>
 
@@ -263,46 +245,10 @@ CON">
       
 
       
-        <h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2><h3 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法:"></a>请求方法:</h3><pre><code>GET:请求获取Request-URI所标识的资源
-POST:在Request-URI所标识的资源后附加新的资源
-DELETE:请求服务器删除Request-URI所标识的资源
-PUT:请求服务器存储一个资源,并用Request-URI作为其标识
-HEAD:请求获取由Request-URI所标识的资源的响应消息报头
-TRACE:请求服务器回送收到的请求信息,主要用于测试或诊断
-CONNECT:保留以备将来使用
-OPTION:请求查询服务器的性能,或者查询与资源相关的选项和需求
-</code></pre><h3 id="RESTful举例"><a href="#RESTful举例" class="headerlink" title="RESTful举例:"></a>RESTful举例:</h3><pre><code>GET /users: 逐页列出所有用户(查)
-HEAD /users: 显示用户列表的概要信息
-POST /users: 创建一个新用户(增)
-GET /users/123: 返回用户 123 的详细信息(查)
-HEAD /users/123: 显示用户 123 的概述信息
-PATCH /users/123: 更新用户123(改)
-PUT /users/123: 更新用户123(改)
-DELETE /users/123: 删除用户123(删)
-OPTIONS /users: 显示关于末端 /users 支持的动词
-OPTIONS /users/123: 显示有关末端 /users/123 支持的动词
-</code></pre><h2 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h2><h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码:"></a>状态码:</h3><pre><code>1XX:指示信息        //请求已接收,继续处理
-2XX:成功           //请求已被成功接受
-3XX:重定向         //要完成请求必须进行更进一步的操作
-4XX:客户端错误     //请求有语法错误或者请求无法实现
-5XX:服务器端错误   //服务器端未能实现合法的请求
-</code></pre><h3 id="举例"><a href="#举例" class="headerlink" title="举例:"></a>举例:</h3><pre><code>200 OK:客户端请求成功.
-400 Bad Request:客户端请求有语法错误,不能被服务器所理解.
-401 Unauthorize:请求未经授权.
-403 Forbidden:服务器收到请求,但是拒绝服务.
-404 Not Found:请求资源不存在,例如输入了错误的URL.
-500 Interal Server Error: 服务器发生不可预期的错误.
-503 Server Unavailable: 服务器当前不能处理客户端的请求,一段时间后可能恢复.
-</code></pre><h2 id="报头"><a href="#报头" class="headerlink" title="报头"></a>报头</h2><pre><code>Host
-User-Agent
-Accept
-Cookie
-Cache-Control
-Referer
-Content-Length
-Content-Range
-Accept-Encoding
-</code></pre>
+        <h2 id="JavaScript的ajax实例"><a href="#JavaScript的ajax实例" class="headerlink" title="JavaScript的ajax实例"></a>JavaScript的ajax实例</h2><h3 id="js原生"><a href="#js原生" class="headerlink" title="js原生"></a>js原生</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        //兼容</span><br><span class="line">        <span class="keyword">function</span> <span class="function"><span class="title">createXHR</span></span>()&#123;</span><br><span class="line">            <span class="keyword">if</span> (typeof XMLHttpRequest != <span class="string">'undefined'</span>)&#123;</span><br><span class="line">                <span class="built_in">return</span> new XMLHttpRequest();</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (typeof ActiveXObject != <span class="string">'undefined'</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span> (typeof arguments.callee.activeXString != <span class="string">'string'</span>)&#123;</span><br><span class="line">                    var versions = [<span class="string">'MSXML2.XMLHttp.6.0'</span>,<span class="string">'MSXML2.Http.3.0'</span>,<span class="string">'MSXML2.Http'</span>];</span><br><span class="line">                    var i,len;</span><br><span class="line">                    <span class="keyword">for</span> (i=0,len=versions.length; i&lt;len; i++)&#123;</span><br><span class="line">                        try &#123;</span><br><span class="line">                            new ActiveXObject(versions[i]);</span><br><span class="line">                            arguments.callee.activeXSting = versions[i];</span><br><span class="line">                            <span class="built_in">break</span>;</span><br><span class="line">                        &#125; catch (ex)&#123;</span><br><span class="line">                            //跳过</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">return</span> new ActiveXObject(arguments.callee.activeXString);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                throw new Error(<span class="string">"No XHR object"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        var xhr = new createXHR();</span><br><span class="line"></span><br><span class="line">        var data = 123;//测试数据</span><br><span class="line"></span><br><span class="line">        xhr.onreadystatechange = callback;//回调函数,在open之前调用,保证兼容性</span><br><span class="line"></span><br><span class="line">        xhr.open(<span class="string">"POST"</span>,<span class="string">'./http.php'</span>,<span class="literal">true</span>);//请求方式,路径,<span class="literal">true</span>为异步</span><br><span class="line"></span><br><span class="line">        xhr.setRequestHeader(<span class="string">"Content-Type"</span>, <span class="string">"application/x-www-form-urlencoded;"</span>);//头</span><br><span class="line"></span><br><span class="line">        xhr.send(<span class="string">'name='</span>+data);//发送数据</span><br><span class="line">        //xhr.send(null);//不发送数据</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">function</span> <span class="function"><span class="title">callback</span></span>()&#123;</span><br><span class="line">            <span class="keyword">if</span> (xhr.readyState==4)&#123;</span><br><span class="line">                <span class="keyword">if</span>((xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 300) || xhr.status == 304)&#123;//304代表响应有效,只不过是直接使用浏览器的缓存</span><br><span class="line">                    var rText = xhr.responseText;</span><br><span class="line">                    var json = <span class="built_in">eval</span>(<span class="string">"("</span> + rText + <span class="string">")"</span>);</span><br><span class="line">                    alert(json[0].name);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"./jquery.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    $(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">         $.ajax(&#123;</span><br><span class="line">            <span class="built_in">type</span> : <span class="string">'POST'</span>,//请求方式</span><br><span class="line">            url : <span class="string">'./http.php'</span>,//请求路径</span><br><span class="line">            data : <span class="string">'&amp;name=456'</span>,//数据</span><br><span class="line">            dataType : <span class="string">'json'</span>,//返回值类型</span><br><span class="line">            async : <span class="literal">true</span>,//异步</span><br><span class="line">            success : <span class="keyword">function</span>(data)&#123;</span><br><span class="line">                alert(data[0].name)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="服务器端PHP"><a href="#服务器端PHP" class="headerlink" title="服务器端PHP"></a>服务器端PHP</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"><span class="variable">$arr</span> = array(</span><br><span class="line">                array(<span class="string">'id'</span>=&gt;1,<span class="string">'name'</span>=&gt;<span class="variable">$_POST</span>[<span class="string">'name'</span>]),</span><br><span class="line">                array(<span class="string">'id'</span>=&gt;2,<span class="string">'name'</span>=&gt;<span class="string">'abc'</span>),</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span>  json_encode(<span class="variable">$arr</span>);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -316,7 +262,7 @@ Accept-Encoding
       
         <div class="post-tags">
           
-            <a href="/tags/HTTP/" rel="tag">#HTTP</a>
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
         </div>
       
@@ -325,17 +271,13 @@ Accept-Encoding
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/09/排序算法/" rel="next" title="PHP排序算法">
-                <i class="fa fa-chevron-left"></i> PHP排序算法
+              <a href="/2016/03/09/HTTP协议/" rel="next" title="HTTP协议">
+                <i class="fa fa-chevron-left"></i> HTTP协议
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/11/AJAX/" rel="prev" title="AJAX">
-                AJAX <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -446,7 +388,7 @@ Accept-Encoding
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#请求"><span class="nav-number">1.</span> <span class="nav-text">请求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#请求方法"><span class="nav-number">1.1.</span> <span class="nav-text">请求方法:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESTful举例"><span class="nav-number">1.2.</span> <span class="nav-text">RESTful举例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应"><span class="nav-number">2.</span> <span class="nav-text">响应</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#状态码"><span class="nav-number">2.1.</span> <span class="nav-text">状态码:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#举例"><span class="nav-number">2.2.</span> <span class="nav-text">举例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报头"><span class="nav-number">3.</span> <span class="nav-text">报头</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript的ajax实例"><span class="nav-number">1.</span> <span class="nav-text">JavaScript的ajax实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#js原生"><span class="nav-number">1.1.</span> <span class="nav-text">js原生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery"><span class="nav-number">1.2.</span> <span class="nav-text">jQuery</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器端PHP"><span class="nav-number">1.3.</span> <span class="nav-text">服务器端PHP</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -208,6 +208,97 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/11/AJAX/" itemprop="url">
+                  AJAX
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-11T18:45:11+08:00" content="2016-03-11">
+              2016-03-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="JavaScript的ajax实例"><a href="#JavaScript的ajax实例" class="headerlink" title="JavaScript的ajax实例"></a>JavaScript的ajax实例</h2><h3 id="js原生"><a href="#js原生" class="headerlink" title="js原生"></a>js原生</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        //兼容</span><br><span class="line">        <span class="keyword">function</span> <span class="function"><span class="title">createXHR</span></span>()&#123;</span><br><span class="line">            <span class="keyword">if</span> (typeof XMLHttpRequest != <span class="string">'undefined'</span>)&#123;</span><br><span class="line">                <span class="built_in">return</span> new XMLHttpRequest();</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (typeof ActiveXObject != <span class="string">'undefined'</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span> (typeof arguments.callee.activeXString != <span class="string">'string'</span>)&#123;</span><br><span class="line">                    var versions = [<span class="string">'MSXML2.XMLHttp.6.0'</span>,<span class="string">'MSXML2.Http.3.0'</span>,<span class="string">'MSXML2.Http'</span>];</span><br><span class="line">                    var i,len;</span><br><span class="line">                    <span class="keyword">for</span> (i=0,len=versions.length; i&lt;len; i++)&#123;</span><br><span class="line">                        try &#123;</span><br><span class="line">                            new ActiveXObject(versions[i]);</span><br><span class="line">                            arguments.callee.activeXSting = versions[i];</span><br><span class="line">                            <span class="built_in">break</span>;</span><br><span class="line">                        &#125; catch (ex)&#123;</span><br><span class="line">                            //跳过</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">return</span> new ActiveXObject(arguments.callee.activeXString);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                throw new Error(<span class="string">"No XHR object"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        var xhr = new createXHR();</span><br><span class="line"></span><br><span class="line">        var data = 123;//测试数据</span><br><span class="line"></span><br><span class="line">        xhr.onreadystatechange = callback;//回调函数,在open之前调用,保证兼容性</span><br><span class="line"></span><br><span class="line">        xhr.open(<span class="string">"POST"</span>,<span class="string">'./http.php'</span>,<span class="literal">true</span>);//请求方式,路径,<span class="literal">true</span>为异步</span><br><span class="line"></span><br><span class="line">        xhr.setRequestHeader(<span class="string">"Content-Type"</span>, <span class="string">"application/x-www-form-urlencoded;"</span>);//头</span><br><span class="line"></span><br><span class="line">        xhr.send(<span class="string">'name='</span>+data);//发送数据</span><br><span class="line">        //xhr.send(null);//不发送数据</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">function</span> <span class="function"><span class="title">callback</span></span>()&#123;</span><br><span class="line">            <span class="keyword">if</span> (xhr.readyState==4)&#123;</span><br><span class="line">                <span class="keyword">if</span>((xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 300) || xhr.status == 304)&#123;//304代表响应有效,只不过是直接使用浏览器的缓存</span><br><span class="line">                    var rText = xhr.responseText;</span><br><span class="line">                    var json = <span class="built_in">eval</span>(<span class="string">"("</span> + rText + <span class="string">")"</span>);</span><br><span class="line">                    alert(json[0].name);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"./jquery.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    $(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">         $.ajax(&#123;</span><br><span class="line">            <span class="built_in">type</span> : <span class="string">'POST'</span>,//请求方式</span><br><span class="line">            url : <span class="string">'./http.php'</span>,//请求路径</span><br><span class="line">            data : <span class="string">'&amp;name=456'</span>,//数据</span><br><span class="line">            dataType : <span class="string">'json'</span>,//返回值类型</span><br><span class="line">            async : <span class="literal">true</span>,//异步</span><br><span class="line">            success : <span class="keyword">function</span>(data)&#123;</span><br><span class="line">                alert(data[0].name)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="服务器端PHP"><a href="#服务器端PHP" class="headerlink" title="服务器端PHP"></a>服务器端PHP</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"><span class="variable">$arr</span> = array(</span><br><span class="line">                array(<span class="string">'id'</span>=&gt;1,<span class="string">'name'</span>=&gt;<span class="variable">$_POST</span>[<span class="string">'name'</span>]),</span><br><span class="line">                array(<span class="string">'id'</span>=&gt;2,<span class="string">'name'</span>=&gt;<span class="string">'abc'</span>),</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span>  json_encode(<span class="variable">$arr</span>);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/09/HTTP协议/" itemprop="url">
                   HTTP协议
                 </a>
@@ -632,7 +723,7 @@ Accept-Encoding
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -642,7 +733,7 @@ Accept-Encoding
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
